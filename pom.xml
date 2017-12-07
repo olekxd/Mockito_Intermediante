@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bartcoder</groupId>
+  <artifactId>Mockito_Course</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Basic Mockito Course</name>
+  <description>
+   1. W tym kursie zostaly poruszone wszystkie fundamentalne rzeczy zwiazane z frameworkiem Mockito
+   ,zostaly zawarte najpierw podstawy dotyczace stubbingu (hardcoding czyli dopisywania w logike biznesowa metod
+   ktore zawieraja zmienne wpisane od reki). Do etapu tworzenia mockow czyli ograniczenia testowania bez dopisywania 
+   stalych wartosci tylko dodawania do testow mockow ktore sa odpowiednikiem danych wprowadzanaych w danym tescie jednostkowym
+   Ciekawostka - nice mocks to przyklady zachowania Mockito w momencie nieprzemslanych zachowan, badz wywolywania elementu np. listy
+   ktory nie zostal uwzgledniony w tescie np. list.get(999) zwroci nam null, lista booleanow zwroci false itd.
+   Nastepnie zostaly poruszone argument matchery czyli dodawanie okreslonego zachowania do danej funkcji/wywolania. Np. wpisania do kazdego elementu listy danej wartosci
+   Dodatkiem bylo ukazanie ze jeden mock moze skladac sie z kilku nastepujacych po sobie wywolan w metodzie twierdzacej rownosc (assertEquals)
+   
+   1a. Na koniec zostala wprowadzona implementacja BDD (Behavior-driven development) czyli tworzenie scneariuszy w oparciu o schemat Given-When-Then. Jest to mozliwie zrozumiala forma 
+   zarowno dla klienta jak i programisty. Gdzie test dzieli sie na czesc zakladajaca jakies twierdzenie, czyli setup, podczas gdy zostaje wywolana metoda z logiki biznesowej
+   oraz w ostatecznosci zostaje zatem sprawdzone czy twierdzenie z zalozeniem sie pokrywaja. 
+   W implementacji BDD sprawdzam czy metoda zostala wywolana czy nie byla wywolywana za pomoca komendy verify. 
+   Nastepnie zostala pokazana alternatywa dla funkcji verify then should konstrukcja, aby jezyk byl bardziej zrozumialy
+   
+   2. Od klasy HamcrestMatchersTest zostaly wykorzystane dodakowe techniki ulatwiajace tesowanie mockow 
+  </description>
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.12</version>
+  		<scope>test</scope>	
+  	</dependency>
+  	<dependency>
+  		<groupId>org.mockito</groupId>
+  		<artifactId>mockito-all</artifactId>
+  		<version>1.10.19</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hamcrest</groupId>
+  		<artifactId>hamcrest-library</artifactId>
+  		<version>1.3</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
+</project>
